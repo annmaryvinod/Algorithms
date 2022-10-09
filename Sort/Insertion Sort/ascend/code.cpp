@@ -1,6 +1,20 @@
 #include <iostream>
 using namespace std;
 
+void readArray(int a[],int n){
+    for(int i =0;i<n;i++){
+        cin>>a[i];
+    }
+}
+
+void printArray(int a[],int n){
+    for(int i=0;i<n;i++){
+        cout<<a[i]<<"\t";
+    }
+    cout<<endl;
+}
+
+
 void insertionSort(int a[],int n){
     int i,j,key;
 
@@ -14,39 +28,24 @@ void insertionSort(int a[],int n){
         }
         a[j+1]=key;
     }
-
-
-    for(i=0;i<n;i++){
-        cout<<a[i]<<"\t";
-    }
-
-    cout<<endl;
 }
 
 
 int main() {
-    int n;
-    cout<<"Enter the size of the array:\n";
+    int i,n;
+    cout<<"Enter the array size :\n";
     cin>>n;
 
     int arr[n];
-
     cout<<"Enter the array elements:\n";
-    for(int i=0;i<n;i++){
-        cin>>arr[i];
-    }
+    readArray(arr,n);
 
+    cout<<"Entered array: \n";
+    printArray(arr,n);
 
-    cout<<endl;
-    cout<<"Entered array:\n";
-    for(int i=0;i<n;i++){
-        cout<<arr[i]<<"\t";
-    }
-    cout<<endl;
-
-    cout<<"Sorted Array:\n";
+    cout<<"Sorted array:\n";
     insertionSort(arr,n);
+    printArray(arr,n);
 
     return 0;
-    
     }
