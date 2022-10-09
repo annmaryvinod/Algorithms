@@ -1,4 +1,7 @@
-// Ascending Order:
+ Insertion Sort - Play Card analogy
+
+
+// Ascending Order:s
 
 1. from i=1 to array length
 
